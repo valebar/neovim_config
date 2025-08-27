@@ -23,6 +23,7 @@ vim.g.maplocalleader = "\\"
 
 vim.o.relativenumber = true
 vim.o.wrap = false
+vim.o.cursorline = true
 
 -- Setup lazy.nvim
 require("lazy").setup({
