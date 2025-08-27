@@ -21,6 +21,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.o.relativenumber = true
+vim.o.wrap = false
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -33,3 +36,5 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+require('mini.completion').setup()
