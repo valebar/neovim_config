@@ -38,4 +38,4 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
-require('mini.completion').setup()
+-- require('mini.completion').setup()
