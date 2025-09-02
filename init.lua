@@ -1,3 +1,6 @@
+vim.opt.exrc = true
+vim.opt.secure = true
+
 require("config.lazy")
 
 vim.lsp.enable('clangdlsp')
