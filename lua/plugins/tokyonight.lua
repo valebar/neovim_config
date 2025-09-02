@@ -5,7 +5,7 @@ return {
 	-- opts = {}
 	-- lazy = vim.g.rg_color ~= 'tokyonight',
 	opts = {
-		style = 'day',
+		style = 'storm',
 		-- transparent = vim.g.rg_transparent,
 		-- styles = {
 			-- comments = { fg = '#7e86ae' },
