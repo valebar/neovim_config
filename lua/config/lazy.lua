@@ -25,6 +25,8 @@ vim.o.relativenumber = true
 vim.o.wrap = false
 vim.o.cursorline = true
 
+vim.opt.updatetime = 250
+vim.opt.signcolumn = "yes"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -39,3 +41,4 @@ require("lazy").setup({
 })
 
 -- require('mini.completion').setup()
+require('mini.statusline').setup()
