@@ -27,6 +27,8 @@ vim.o.cursorline = true
 
 vim.opt.updatetime = 250
 vim.opt.signcolumn = "yes"
+
+vim.keymap.set("n", "<Leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic messages in a floating window" })
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
