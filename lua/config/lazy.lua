@@ -45,3 +45,4 @@ require("lazy").setup({
 -- require('mini.completion').setup()
 require('mini.statusline').setup()
 require('mini.surround').setup()
+require('mini.comment').setup()
