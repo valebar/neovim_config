@@ -42,7 +42,7 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
--- require('mini.completion').setup()
+require('mini.completion').setup()
 require('mini.statusline').setup()
 require('mini.surround').setup()
 require('mini.comment').setup()
