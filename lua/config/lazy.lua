@@ -46,6 +46,8 @@ require('mini.completion').setup()
 require('mini.statusline').setup()
 require('mini.surround').setup()
 require('mini.comment').setup()
-require('mini.icons').setup()
+require('mini.icons').setup({
+	style="ascii"
+})
 require('mini.tabline').setup()
 require('mini.trailspace').setup()
