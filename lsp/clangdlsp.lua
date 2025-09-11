@@ -8,5 +8,5 @@ return {
 		'--function-arg-placeholders',
 		'--fallback-style=llvm',
 	},
-	filetypes = {'c', 'cpp', 'h', 'C', 'hpp', 'm', 'mm', 'objcpp'}
+	filetypes = {'c', 'cpp', 'h', 'C', 'hpp', 'objcpp'}
 }
