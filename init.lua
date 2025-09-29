@@ -24,6 +24,7 @@ require('mini.extra').setup()
 vim.lsp.enable('clangdlsp')
 vim.lsp.enable('odinlsp')
 vim.lsp.enable('rustlsp')
+vim.lsp.enable('golsp')
 -- vim.lsp.config('rust_analyzer', {
 -- 	settings = {
 -- 		['rust-analyzer'] = {
