@@ -20,6 +20,7 @@ require('mini.diff').setup()
 require('mini.tabline').setup()
 require('mini.trailspace').setup()
 require('mini.extra').setup()
+require('mini.align').setup()
 
 vim.lsp.enable('clangdlsp')
 vim.lsp.enable('odinlsp')
