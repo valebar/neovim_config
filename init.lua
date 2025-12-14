@@ -25,5 +25,5 @@ vim.lsp.enable('odinlsp')
 vim.lsp.enable('rustlsp')
 vim.lsp.enable('golsp')
 vim.lsp.enable('cmake')
-
+vim.lsp.enable('tsserver')
 vim.cmd[[colorscheme tokyonight-storm]]
