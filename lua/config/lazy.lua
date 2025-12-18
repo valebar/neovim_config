@@ -41,21 +41,3 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
-
--- require('mini.completion').setup()
--- require('mini.statusline').setup()
--- require('mini.surround').setup()
--- require('mini.comment').setup()
--- if (package.config:sub(1,1) == '\\') then
--- 	require('mini.icons').setup({
--- 		style="ascii"
--- 	})
--- else
--- 	require('mini.icons').setup({
--- 		style="glyph"
--- 	})
--- end
--- require('mini.diff').setup()
--- require('mini.tabline').setup()
--- require('mini.trailspace').setup()
--- require('mini.extra').setup()

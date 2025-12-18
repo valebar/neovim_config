@@ -1,9 +1,8 @@
-return { 
-	'echasnovski/mini.nvim', 
+return {
+	'echasnovski/mini.nvim',
 	version = '*',
 	config = function()
 		require('mini.align').setup()
-
 		require('mini.bracketed').setup({
 			buffer = { options = { wrap = false } },
 			comment = { suffix = '', options = { wrap = false } },
@@ -20,11 +19,8 @@ return {
 			window = { options = { wrap = false } },
 			yank = { options = { wrap = false } },
 		})
-
 		require('mini.comment').setup()
-
 		require('mini.move').setup()
-
 		require('mini.operators').setup({
 			evaluate = {
 				prefix = '',
@@ -42,5 +38,19 @@ return {
 				prefix = '',
 			},
 		})
+		require('mini.completion').setup()
+		require('mini.statusline').setup({
+			use_icons = false
+		})
+		require('mini.surround').setup()
+		require('mini.icons').setup({
+			style="ascii"
+		})
+		require('mini.diff').setup()
+		require('mini.tabline').setup()
+		require('mini.trailspace').setup()
+		require('mini.extra').setup()
+		require('mini.indentscope').setup()
+		require('mini.notify').setup()
 	end,
 }
