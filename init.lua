@@ -1,6 +1,6 @@
 vim.opt.exrc = true
 vim.opt.secure = true
-vim.api.nvim_set_option("clipboard","unnamed")
+-- vim.api.nvim_set_option("clipboard","unnamed")
 
 require("config.lazy")
 
