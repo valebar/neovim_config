@@ -10,5 +10,7 @@ return {
 		{ "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", desc = "Telescope buffers" },
 		{ "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", desc = "Telescope help tags" },
 	},
-	extensions = {"flutter"}
+	config = function()
+		require('telescope').load_extension('flutter')
+	end,
 }

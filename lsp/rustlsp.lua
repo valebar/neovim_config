@@ -45,9 +45,10 @@ return {
 		local cargo_workspace_root
 
 		if cargo_crate_dir == nil then
-			on_dir(
+			local git_dir = vim.fs.find('.git', { path = fname, upward = true })[1]
+		on_dir(
 				vim.fs.root(fname, { 'rust-project.json' })
-				or vim.fs.dirname(vim.fs.find('.git', { path = fname, upward = true })[1])
+				or (git_dir and vim.fs.dirname(git_dir))
 			)
 			return
 		end
@@ -65,8 +66,8 @@ return {
 		vim.system(cmd, { text = true }, function(output)
 			if output.code == 0 then
 				if output.stdout then
-					local result = vim.json.decode(output.stdout)
-					if result['workspace_root'] then
+					local ok, result = pcall(vim.json.decode, output.stdout)
+					if ok and result and result['workspace_root'] then
 						cargo_workspace_root = vim.fs.normalize(result['workspace_root'])
 					end
 				end

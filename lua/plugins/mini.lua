@@ -23,28 +23,28 @@ return {
 		require('mini.move').setup()
 		require('mini.operators').setup({
 			evaluate = {
-				prefix = '',
+				prefix = '', -- disabled
 			},
 			exchange = {
 				prefix = '<leader>e',
 			},
 			multiply = {
-				prefix = '',
+				prefix = '', -- disabled
 			},
 			replace = {
 				prefix = '<leader>r',
 			},
 			sort = {
-				prefix = '',
+				prefix = '', -- disabled
 			},
 		})
 		require('mini.completion').setup()
 		require('mini.statusline').setup({
-			use_icons = false
+			use_icons = vim.g.have_nerd_font
 		})
 		require('mini.surround').setup()
 		require('mini.icons').setup({
-			style="ascii"
+			style = vim.g.have_nerd_font and 'glyph' or 'ascii'
 		})
 		require('mini.diff').setup()
 		require('mini.tabline').setup()
