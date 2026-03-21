@@ -52,5 +52,37 @@ return {
 		require('mini.extra').setup()
 		require('mini.indentscope').setup()
 		require('mini.notify').setup()
+		require('mini.starter').setup({
+			items = {
+				{ name = 'Find files',       action = 'Telescope find_files',  section = 'Telescope' },
+				{ name = 'Live grep',        action = 'Telescope live_grep',   section = 'Telescope' },
+				{ name = 'Buffers',          action = 'Telescope buffers',     section = 'Telescope' },
+				{ name = 'LazyGit',          action = 'LazyGit',               section = 'Git' },
+				{ name = 'Lazy (plugins)',   action = 'Lazy',                  section = 'Config' },
+				{ name = 'Quit',             action = 'qa',                    section = 'Config' },
+			},
+			footer = table.concat({
+				'',
+				'  Navigation',
+				'  gd  definition        gD  declaration',
+				'  gr  references        gi  implementation',
+				'  K   hover docs        <C-k> signature help',
+				'',
+				'  LSP Actions',
+				'  <leader>rn  rename    <leader>ca  code action',
+				'  <leader>f   format    <leader>d   diagnostics float',
+				'',
+				'  Diagnostics',
+				'  ]g  next              [g  prev',
+				'',
+				'  Telescope  (<leader>f...)',
+				'  ff  files   fg  grep    fb  buffers  fh  help',
+				'  fd  diagnostics        fs  symbols',
+				'  fr  references         fi  implementations',
+				'',
+				'  Git',
+				'  <leader>lg  LazyGit',
+			}, '\n'),
+		})
 	end,
 }

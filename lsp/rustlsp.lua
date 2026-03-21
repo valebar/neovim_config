@@ -46,7 +46,7 @@ return {
 
 		if cargo_crate_dir == nil then
 			local git_dir = vim.fs.find('.git', { path = fname, upward = true })[1]
-		on_dir(
+			on_dir(
 				vim.fs.root(fname, { 'rust-project.json' })
 				or (git_dir and vim.fs.dirname(git_dir))
 			)

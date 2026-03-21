@@ -21,8 +21,22 @@ vim.lsp.enable('tsserver')
 
 vim.cmd[[colorscheme tokyonight-storm]]
 
-vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { noremap = true, silent = true })
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
+-- Navigation
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration,    { noremap = true, silent = true })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition,     { noremap = true, silent = true })
+vim.keymap.set("n", "gr", vim.lsp.buf.references,     { noremap = true, silent = true })
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { noremap = true, silent = true })
 
+-- Docs
+vim.keymap.set("n", "K",    vim.lsp.buf.hover,          { noremap = true, silent = true })
+vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, { noremap = true, silent = true })
+
+-- Actions
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename,       { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action,  { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>f",  vim.lsp.buf.format,       { noremap = true, silent = true })
+
+-- Diagnostics
 vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { noremap = true, silent = true })
