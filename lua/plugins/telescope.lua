@@ -14,7 +14,4 @@ return {
 		{ "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<cr>",        desc = "References" },
 		{ "<leader>fi", "<cmd>lua require('telescope.builtin').lsp_implementations()<cr>",   desc = "Implementations" },
 	},
-	config = function()
-		require('telescope').load_extension('flutter')
-	end,
 }
