@@ -1,6 +1,11 @@
 vim.o.exrc   = true
 vim.o.secure = true
 
+-- Disable unused providers to suppress checkhealth warnings
+vim.g.loaded_perl_provider   = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider   = 0
+
 -- Detect icon support: known capable terminals, not over SSH
 -- Set to true in a local .nvimrc if your terminal has a Nerd Font configured
 vim.g.have_nerd_font = vim.g.have_nerd_font or (
@@ -10,7 +15,7 @@ vim.g.have_nerd_font = vim.g.have_nerd_font or (
 	vim.env.KITTY_WINDOW_ID ~= nil
 ) and vim.env.SSH_CLIENT == nil and vim.env.SSH_TTY == nil
 
-require("config.lazy")
+require("config.pack")
 
 vim.lsp.enable('clangdlsp')
 vim.lsp.enable('odinlsp')

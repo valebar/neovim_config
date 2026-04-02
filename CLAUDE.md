@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A personal Neovim configuration using Lua, managed by [lazy.nvim](https://lazy.folke.io/). There are no build, lint, or test commands — this is a pure editor config that takes effect when Neovim starts.
+A personal Neovim configuration using Lua, managed by the built-in `vim.pack` (Neovim 0.12+). There are no build, lint, or test commands — this is a pure editor config that takes effect when Neovim starts.
 
 To test changes, reload the config inside Neovim with `:source $MYVIMRC` or restart Neovim.
 
@@ -12,11 +12,11 @@ To test changes, reload the config inside Neovim with `:source $MYVIMRC` or rest
 
 ### Entry point
 
-`init.lua` bootstraps the config: sets options, detects Nerd Font support, loads `config/lazy` (which initializes lazy.nvim and sets core editor options/leader keys), enables LSP servers, sets colorscheme, and defines global keymaps.
+`init.lua` bootstraps the config: sets options, detects Nerd Font support, loads `config/pack` (which calls `vim.pack.add()`, sets core editor options/leader keys, and configures all plugins), enables LSP servers, sets colorscheme, and defines global keymaps.
 
-### Plugin specs — `lua/plugins/`
+### Plugin management — `lua/config/pack.lua`
 
-Each file returns a lazy.nvim plugin spec table. lazy.nvim auto-imports all files in this directory via `spec = { import = "plugins" }`.
+All plugins are added via a single `vim.pack.add()` call, with dependencies listed before the plugins that use them. Plugin configuration (`setup()` calls, keymaps) follows immediately after. flutter-tools setup is deferred via a `FileType dart` autocmd.
 
 ### LSP configs — `lsp/`
 
