@@ -27,6 +27,9 @@ vim.pack.add({
 
     -- Flutter / Dart (setup is deferred to first Dart file open)
     'https://github.com/nvim-flutter/flutter-tools.nvim',
+
+    -- A (Neo)vim plugin for removing all but some whitelisted syntax highlighting,
+    'https://github.com/adolenc/syntaxless.vim'
 })
 
 -- mini.nvim
@@ -110,3 +113,4 @@ vim.api.nvim_create_autocmd('FileType', {
         require('telescope').load_extension('flutter')
     end,
 })
+
