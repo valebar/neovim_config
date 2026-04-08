@@ -46,11 +46,13 @@ vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { noremap = true, silent = true })
 
+-- Pack
+vim.keymap.set('n', '<leader>u', '<cmd>lua vim.pack.update()<CR>', { desc = "Update packages" })
 
 vim.cmd([[
   call syntaxless#Whitelist('global', ['String', 'Comment'])
   call syntaxless#Whitelist('python', ['pythonStatement', 'String', 'Comment'])
   call syntaxless#Whitelist('odin', ['String', 'Comment'])
-  call syntaxless#Whitelist('lua', ['Statement', 'String', 'Comment'])
+  call syntaxless#Whitelist('lua', ['String', 'Comment'])
   call syntaxless#Whitelist('markdown')
 ]])
